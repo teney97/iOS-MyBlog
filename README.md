@@ -12,9 +12,22 @@
 * [iOS｜《Effective Objective-C 2.0》52 个知识点总结（上）](https://github.com/teney97/iOS-Blog/blob/main/读书笔记/iOS｜《Effective%20Objective-C%202.0》52%20个知识点总结（上）.md)
 * [iOS｜《Effective Objective-C 2.0》52 个知识点总结（下）](https://github.com/teney97/iOS-Blog/blob/main/读书笔记/iOS｜《Effective%20Objective-C%202.0》52%20个知识点总结（下）.md)
 
-## OC
+## 内存管理
 
-* [OC｜属性关键字和所有权修饰符](https://github.com/teney97/Blog/blob/main/iOS/OC｜属性关键字和所有权修饰符.md)
+* [iOS｜老生常谈内存管理：导读](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜老生常谈内存管理：导读.md)
+* [iOS｜老生常谈内存管理（一）：引用计数](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜老生常谈内存管理（一）：引用计数.md)
+* [iOS｜老生常谈内存管理（二）：从 MRC 说起](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜老生常谈内存管理（二）：从%20MRC%20说起.md)
+* [iOS｜老生常谈内存管理（三）：ARC 面世](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜老生常谈内存管理（三）：ARC%20面世.md)
+* [iOS｜老生常谈内存管理（四）：内存管理方法源码分析](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜老生常谈内存管理（四）：内存管理方法源码分析.md)
+* [iOS｜老生常谈内存管理（五）：Tagged Pointer](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜老生常谈内存管理（五）：Tagged%20Pointer.md)
+* [iOS｜老生常谈内存管理（六）：聊聊 autorelease 和 @autoreleasepool](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜聊聊%20autorelease%20和%20%40autoreleasepool.md)
+
+## iOS 
+
+* [iOS｜OC 属性关键字和所有权修饰符](https://github.com/teney97/Blog/blob/main/iOS/OC｜属性关键字和所有权修饰符.md)
+* [iOS｜关于 KVC 的一些总结](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜关于%20KVC%20的一些总结.md)
+* [iOS｜关于 KVO 的一些总结](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜关于%20KVO%20的一些总结.md)
+* [iOS｜关于 GCD 的一些总结](https://github.com/teney97/iOS-Blog/blob/main/iOS/iOS｜关于%20GCD%20的一些总结.md)
 
 ## OC 底层探索
 
