@@ -155,7 +155,7 @@
     ```
     4. 局部类型常量不放在 “全局符号表” 中，所以无须用类名作为前缀。
 * 全局类型常量
-       ```objc
+    ```objc
     // In the header file
     extern NSString *const EOCStringConstant;
         
@@ -238,7 +238,7 @@
     typedef NS_ENUM(NSUInteger, EOCConnectionState) {
         EOCConnectionStateDisconnected,
         EOCConnectionStateConnecting,
-          EOCConnectionStateConnected,
+        EOCConnectionStateConnected,
     };
         
     typedef NS_OPTIONS(NSUInteger, EOCPermittedDirection) {
