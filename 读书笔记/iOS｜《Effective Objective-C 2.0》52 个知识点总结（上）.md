@@ -227,7 +227,7 @@
     
     UIViewAutoresizing resizing = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth;
     if (resizing & UIViewAutoresizingFlexibleLeftMargin) {
-         ......
+        ......
     }
     ```
 * Foundation 中定义了关于枚举的辅助宏
@@ -293,7 +293,7 @@
         if(self = [super init]) {
             _name = [name copy];
         }
-           return self;
+        return self;
     }
     ```
     若是自己来实现存取方法，也应该保证其具备相关属性所声明的性质。
