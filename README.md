@@ -6,6 +6,10 @@
 * [iOS 面试解析｜block 的变量捕获机制](https://github.com/teney97/Blog/blob/main/iOS%20面试解析/iOS%20面试解析｜block%20的变量捕获机制.md)
 * [iOS 面试解析｜对深浅拷贝的理解](https://github.com/teney97/Blog/blob/main/iOS%20面试解析/iOS%20面试解析｜对深浅拷贝的理解.md)
 * [iOS 面试解析｜Block 的类型](https://github.com/teney97/Blog/blob/main/iOS%20面试解析/iOS%20面试解析｜Block%20的类型.md)
+* [iOS 面试解析｜load 和 initialize](https://github.com/teney97/iOS-Blog/blob/main/iOS%20%E9%9D%A2%E8%AF%95%E8%A7%A3%E6%9E%90/iOS%20%E9%9D%A2%E8%AF%95%E8%A7%A3%E6%9E%90%EF%BD%9Cload%20%E5%92%8C%20initialize.md)
+* [iOS 面试解析｜isKindOfClass、isMemberOfClass](https://github.com/teney97/iOS-Blog/blob/main/iOS%20%E9%9D%A2%E8%AF%95%E8%A7%A3%E6%9E%90/iOS%20%E9%9D%A2%E8%AF%95%E8%A7%A3%E6%9E%90%EF%BD%9CisKindOfClass%E3%80%81isMemberOfClass.md)
+* [iOS 面试解析｜一道 GCD 死锁题](https://github.com/teney97/iOS-Blog/blob/main/iOS%20%E9%9D%A2%E8%AF%95%E8%A7%A3%E6%9E%90/iOS%20%E9%9D%A2%E8%AF%95%E8%A7%A3%E6%9E%90%EF%BD%9C%E4%B8%80%E9%81%93%20GCD%20%E6%AD%BB%E9%94%81%E9%A2%98.md)
+* [iOS 面试解析｜KVO 的实现原理](https://github.com/teney97/iOS-Blog/blob/main/iOS%20%E9%9D%A2%E8%AF%95%E8%A7%A3%E6%9E%90/iOS%20%E9%9D%A2%E8%AF%95%E8%A7%A3%E6%9E%90%EF%BD%9CKVO%20%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.md)
 
 
 ## 读书笔记
