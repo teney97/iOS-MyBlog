@@ -92,68 +92,7 @@ copy|setter 方法的实现是 release 旧值，copy 新值，一般用于 block
 
 ### 可空性
 
-[Nullability and Objective-C](https://developer.apple.com/swift/blog/?id=25 "Nullability and Objective-C")
-
-苹果在 Xcode 6.3 引入的一个 Objective-C 的新特性 `nullability annotations`。这些关键字可以用于属性、方法返回值和参数中，来指定对象的可空性，这样编写代码的时候就会智能提示。在 Swift 中可以使用 `?` 和 `!` 来表示一个对象是 `optional` 的还是 `non-optional`，如 `UIView?` 和 `UIView!`。而在 Objective-C 中则没有这一区分，`UIView` 即可表示这个对象是 `optional`，也可表示是 `non-optioanl`。这样就会造成一个问题：在 Swift 与 Objective-C 混编时，Swift 编译器并不知道一个 Objective-C 对象到底是 `optional` 还是 `non-optional`，因此这种情况下编译器会隐式地将 Objective-C 的对象当成是 `non-optional`。引入 `nullability annotations` 一方面为了让 iOS 程序员平滑地从 Objective-C 过渡到 Swift，另一方面也促使开发者在编写 Objective-C 代码时更加规范，减少同事之间的沟通成本。
-
-关键字 `__nullable` 和 `__nonnull` 是苹果在 Xcode 6.3 中发行的。由于与第三方库的潜在冲突，苹果在 Xcode 7 中将它们更改为 `_Nullable` 和 `_Nonnull`。但是，为了与 Xcode 6.3 兼容，苹果预定义了宏 `__nullable` 和 `__nonnull` 来扩展为新名称。同时苹果同样还支持没有下划线的写法 `nullable` 和 `nonnull`，它们的区别在与放置位置不同。
-
->注意：此类关键词仅仅提供警告，并不会报编译错误。只能用于声明对象类型，不能声明基本数据类型。
-
-属性关键字|用法
---|--
-nullable、_Nullable 、__nullable|对象可以为空，区别在于放置位置不同
-nonnull、_Nonnull、__nonnull|对象不能为空，区别在于放置位置不同
-null_unspecified、_Null_unspecified 、__null_unspecified|未指定是否可为空，区别在于放置位置不同
-null_resettable|1. getter 方法不能返回为空，setter 方法可以为空；<br>2. 必须重写 setter 或 getter 方法做非空处理。否则会报警告 `Synthesized setter 'setName:' for null_resettable property 'name' does not handle nil`
-
-
-#### 使用效果
-
-```objc
-@interface AAPLList : NSObject <NSCoding, NSCopying>
-// ...
-- (AAPLListItem * _Nullable)itemWithName:(NSString * _Nonnull)name;
-@property (copy, readonly) NSArray * _Nonnull allItems;
-// ...
-@end
-
-// --------------
-
-[self.list itemWithName:nil]; // warning!
-```
-
-#### Audited Regions：Nonnull 区域设置
-
-如果每个属性或每个方法都去指定 `nonnull `和 `nullable`，将是一件非常繁琐的事。苹果为了减轻我们的工作量，专门提供了两个宏： `NS_ASSUME_NONNULL_BEGIN` 和 `NS_ASSUME_NONNULL_END`。在这两个宏之间的代码，所有简单指针类型都被假定为 `nonnull`，因此我们只需要去指定那些 `nullable` 指针类型即可。示例代码如下：
-
-```objc
-NS_ASSUME_NONNULL_BEGIN
-@interface AAPLList : NSObject <NSCoding, NSCopying>
-// ...
-- (nullable AAPLListItem *)itemWithName:(NSString *)name;
-- (NSInteger)indexOfItem:(AAPLListItem *)item;
-
-@property (copy, nullable) NSString *name;
-@property (copy, readonly) NSArray *allItems;
-// ...
-@end
-NS_ASSUME_NONNULL_END
-
-// --------------
-
-self.list.name = nil;   // okay
-
-AAPLListItem *matchingItem = [self.list itemWithName:nil];  // warning!
-```
-
-#### 笔者的一些经验总结
-
-* 使用好可空性关键字可以让 Objective-C 开发者平滑地过渡到 Swift，而不会被 Swift 可选类型绊倒。
-* 使用好可空性关键字可以让代码更加规范，比如你不应该将一个指定为 nonnull 的属性赋值为 nil。
-* `NS_ASSUME_NONNULL_BEGIN` 和 `NS_ASSUME_NONNULL_END` 只是苹果为了减轻我们的工作量而提供的宏，而不是允许我们忽略可空性关键字。
-* 如果你没有指定属性/方法参数为 nullable 的话，当给该属性赋值/传参 nil 的时候，会得到烦人的警告。
-* 进行混编的时候，如果你没有给一个可为空的属性指定 nullable，就无法进行可选链式调用，因为 Swift 会把它当作非可选类型来处理，而且你还不能强制解包，因为它可能为 nil，这时候你就得加一层保护。
+见 [iOS 混编｜为 Objective-C API 指定可空性](https://juejin.cn/post/7028567690964893703/)。
 
 
 ### 类属性 class
