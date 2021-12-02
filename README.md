@@ -79,4 +79,4 @@
 
 ## CarPlay
 
-# [iOS CarPlay｜与你分享 CarPlay 音频 App 的开发过程与细节](https://github.com/teney97/iOS-CarPlay)
+* [iOS CarPlay｜与你分享 CarPlay 音频 App 的开发过程与细节](https://github.com/teney97/iOS-CarPlay)
