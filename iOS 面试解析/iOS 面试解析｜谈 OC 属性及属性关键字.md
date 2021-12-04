@@ -96,7 +96,7 @@ copy|setter 方法的实现是 release 旧值，copy 新值，一般用于 block
 
 ### 类属性 class
 
-> Objective-C 是在 [Xcode 8](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW78) 支持的，为了与 Swift 类型属性互操作，它不会进行 `property autosynthesis`。可以说自从 Swift 发布了后，Objective-C 的更新几乎都是为了更好地与 Swift 混编。
+> Objective-C 类属性是在 [Xcode 8](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW78) 支持的，为了与 Swift 类型属性互操作，它不会进行 `property autosynthesis`。可以说自从 Swift 发布了后，Objective-C 的更新几乎都是为了更好地与 Swift 混编。
 
 属性可以分为实例属性和类属性：
 
